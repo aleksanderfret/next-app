@@ -1,0 +1,7 @@
+*.css
+*.scss
+*.scss.d.ts
+*.min.js
+node_modules/*
+.next
+dist

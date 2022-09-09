@@ -2,13 +2,9 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div>
-  <div
-    class="container"
-  >
+  <div>
     <main>
-      <h1
-        class="title"
-      >
+      <h1>
         Welcome to 
         <a
           href="https://nextjs.org"
@@ -16,19 +12,14 @@ exports[`renders homepage unchanged 1`] = `
           Next.js!
         </a>
       </h1>
-      <p
-        class="description"
-      >
+      <p>
         Get started by editing 
         <code>
           pages/index.js
         </code>
       </p>
-      <div
-        class="grid"
-      >
+      <div>
         <a
-          class="card"
           href="https://nextjs.org/docs"
         >
           <h3>
@@ -39,7 +30,6 @@ exports[`renders homepage unchanged 1`] = `
           </p>
         </a>
         <a
-          class="card"
           href="https://nextjs.org/learn"
         >
           <h3>
@@ -50,7 +40,6 @@ exports[`renders homepage unchanged 1`] = `
           </p>
         </a>
         <a
-          class="card"
           href="https://github.com/vercel/next.js/tree/canary/examples"
         >
           <h3>
@@ -61,7 +50,6 @@ exports[`renders homepage unchanged 1`] = `
           </p>
         </a>
         <a
-          class="card"
           href="https://vercel.com/new"
         >
           <h3>
@@ -73,9 +61,7 @@ exports[`renders homepage unchanged 1`] = `
         </a>
       </div>
     </main>
-    <footer
-      class="footer"
-    >
+    <footer>
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         rel="noopener noreferrer"
@@ -83,9 +69,7 @@ exports[`renders homepage unchanged 1`] = `
       >
         Powered by
          
-        <span
-          class="logo"
-        >
+        <span>
           <span
             style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
           >
