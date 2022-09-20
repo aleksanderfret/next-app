@@ -11,14 +11,16 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prepare": "husky install",
-    "prepare-commit-msg": "npx ts-node -T scripts/prepare-commit-msg.ts",
-    "pre-commit": "lint-staged",
+    "prepare-commit-msg": "npx ts-node -T scripts/prepareCommitMessage.ts",
+    "pre-commit": "npm run validateBranch && lint-staged",
     "pre-push": "npm-run-all check",
     "start": "next start",
     "test": "jest --ci",
     "test:staged": "jest --bail --findRelatedTests --passWithNoTests",
     "test:update": "jest --updateSnapshot",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "validateBranch": "npx ts-node -T scripts/validateBranchName.ts",
+    "a": "npx ts-node scripts/test.ts package.json"
   },
   "dependencies": {
     "next": "latest",
@@ -46,7 +48,8 @@
     "prettier": "^2.7.1",
     "ts-jest": "^29.0.0",
     "ts-node": "^10.9.1",
-    "typescript": "4.8.3"
+    "typescript": "4.8.3",
+    "validate-branch-name": "^1.3.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,scss,css,md}": [
@@ -56,5 +59,20 @@
       "eslint -c .eslintrc.json --fix",
       "npm run test:staged"
     ]
+  },
+  "validate-branch-name": {
+    "pattern": "^(main|master|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style){1}\/por-[0-9]{1,}\/[a-z0-9-]{4,92})$",
+    "errorMsg": "Branch name should follow the pattern: '^(main|master|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style){1}\/por-[0-9]{1,4}!?\/[a-z0-9_-]{4,92})$'"
+  },
+  "validateGitNames": {
+    "pattern": "^(main|master|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style){1}\/por-[0-9]{1,}\/[a-z0-9-]{4,92})$",
+
+    "feedback": "Branch name should follow the pattern: '^(main|master|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style){1}\/por-[0-9]{1,4}!?\/[a-z0-9_-]{4,92})$'",
+    "separator": "/",
+    "skipBranches": [],
+    "ticketNumberMinLength": 1,
+    "ticketPrefix": "por",
+    "ticketSeparator": "-",
+    "type": ["fix", "feat", "chore", "docs", "refactor", "style"]
   }
 }
