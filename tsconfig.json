@@ -22,7 +22,8 @@
     "paths": {
       "*": ["src/*"],
       "components/*": ["src/components/*"],
-      "pages/*": ["src/pages/*"]
+      "pages/*": ["src/pages/*"],
+      "public/*": ["public/*"]
     },
     "preserveConstEnums": true,
     "resolveJsonModule": true,
